@@ -8,7 +8,7 @@ app = FastAPI(
 
 app.include_router(user_routes.router, prefix="/api/v1")
 # app.include_router(menu_routes.router)
-# app.include_router(order_routes.router)
+app.include_router(order_routes.router, prefix="/api/v1")
 
 @app.get("/")
 def root():
